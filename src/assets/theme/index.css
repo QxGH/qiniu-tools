@@ -1,0 +1,19 @@
+#app {
+  color: #333;
+  background: #fff;
+}
+
+#app.black {
+  color: #DADDE1;
+  background: #21252B;
+}
+
+#app.black .el-form-item__label {
+  color: #DADDE1;
+}
+
+#app.black .el-upload-dragger, #app.black .el-input__inner, #app.black .el-textarea__inner, #app.black .el-input__count-inner {
+  border-color: #dadde1;
+  background: #282C34;
+  color: #DADDE1;
+}

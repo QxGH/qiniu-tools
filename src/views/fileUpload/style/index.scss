@@ -1,0 +1,49 @@
+.uploadFile {
+  max-width: 1100px;
+  margin: 0 auto;
+  .title {
+    font-weight: bold;
+    font-size: 16px;
+    margin: 20px 0 10px;
+  }
+  .upload-control {
+    .el-upload {
+      display: block;
+    }
+    .el-upload-dragger {
+      width: 100%;
+    }
+  }
+  .el-button-group .el-button--primary:not(:first-child):not(:last-child) {
+    border-left-color: #b3d8ff;
+    border-right-color: #b3d8ff;
+  }
+  .el-button-group .el-button--primary:last-child {
+    border-left-color: #b3d8ff;
+  }
+  .el-button--primary.is-plain:focus {
+    color: #409EFF;
+    background: #ecf5ff;
+    border-color: #b3d8ff;
+    &:hover {
+      background: #409EFF;
+      border-color: #409EFF;
+      color: #FFF;
+    }
+  }
+  .upload-loading-box {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 89;
+    background: rgba(0,0,0,.7);
+    padding-top: 26px;
+    .el-progress__text {
+      color: #fff;
+    }
+  }
+}

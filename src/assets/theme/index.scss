@@ -1,0 +1,22 @@
+$white: #fff;
+$white_sub: #DADDE1;
+$black: #21252B;
+$black_sub: #282C34;
+$border_black_color: #dadde1;
+
+#app {
+  color: #333;
+  background: $white;
+  &.black {
+    color: $white_sub;
+    background: $black;
+    .el-form-item__label {
+      color: $white_sub;
+    }
+    .el-upload-dragger, .el-input__inner, .el-textarea__inner, .el-input__count-inner {
+      border-color: $border_black_color;
+      background: $black_sub;
+      color: $white_sub;
+    }
+  }
+}

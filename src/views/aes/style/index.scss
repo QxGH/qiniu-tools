@@ -1,0 +1,29 @@
+.aes {
+  max-width: 1100px;
+  margin: 0 auto;
+  .btn-group {
+    text-align: center;
+    margin: 15px 0;
+    .el-button-group .el-button--primary:last-child {
+      border-left-color: #b3d8ff;
+    }
+    .el-button-group .el-button--primary:not(:first-child):not(:last-child) {
+      border-left-color: #b3d8ff;
+      border-right-color: #b3d8ff;
+    }
+  }
+  .result-box {
+    border: 1px solid #ebebeb;
+    border-radius: 4px;
+    word-break: break-all;
+    padding: 10px;
+    line-height: 22px;
+    white-space: pre-wrap;
+  }
+  @media screen and (max-width: 768px) {
+    .aes-form {
+      margin-left: -15px;
+    }
+  }
+}
+

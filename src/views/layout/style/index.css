@@ -1,0 +1,13 @@
+.layout {
+  height: 100%;
+  display: flex;
+}
+
+.layout .el-header {
+  padding: 0;
+}
+
+.layout .el-main {
+  overflow-x: hidden;
+  overflow-y: auto;
+}
