@@ -15,9 +15,6 @@ const routes = [
     children: [
       {
         path: '/',
-        redirect: '/imageUpload'
-      }, {
-        path: '/imageUpload',
         name: 'ImageUpload',
         component: () => import('../views/imageUpload')
       }, {

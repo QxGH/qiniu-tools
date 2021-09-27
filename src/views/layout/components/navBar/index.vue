@@ -10,7 +10,7 @@
       active-text-color="#ffd04b"
       router
     >
-      <el-menu-item index="/imageUpload">七牛云图片上传</el-menu-item>
+      <el-menu-item index="/">七牛云图片上传</el-menu-item>
       <el-menu-item index="/fileUpload">七牛云文件上传</el-menu-item>
       <el-menu-item index="/aes">AES加解密</el-menu-item>
     </el-menu>
@@ -24,7 +24,7 @@ export default {
   name: "navbar",
   data(){
     return {
-      defaultActive: '/imageUpload'
+      defaultActive: '/'
     }
   },
   methods: {

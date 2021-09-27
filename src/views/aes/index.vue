@@ -108,6 +108,10 @@ export default {
       } else {
         word = str;
       };
+      if(!word) {
+        this.$message.warning('data 有误')
+        return
+      }
       // 解密方法
       this.$refs.form.validate(valid => {
         if (valid) {
@@ -142,7 +146,7 @@ export default {
             mode: CryptoJS.mode.CBC,
             padding: CryptoJS.pad.Pkcs7
           });
-          this.result = encrypted.ciphertext.toString().toUpperCase();
+          this.result = encrypted.toString();
         } else {
           this.$message.warning("请输入必填项！");
           return false;

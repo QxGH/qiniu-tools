@@ -16,7 +16,7 @@
       <el-upload
         class="upload-control"
         drag
-        action=""
+        action="https://api.services.xingchen.cn/"
         :before-upload="beforeUpload"
         multiple
         :show-file-list="false"
@@ -34,7 +34,9 @@
       <ul class="result-list">
         <template v-for="(item, index) in resultList">
           <li class="item clearfix" :key="index">
-            <el-image class="img" :src="item.url" fit="contain"></el-image>
+            <div class="img-box">
+              <el-image class="img" :src="item.url" fit="contain"></el-image>
+            </div>
             <div class="info">
               <div class="infoItem">
                 <label class="resultTiele">文件名：</label>
@@ -47,6 +49,10 @@
               <div class="infoItem">
                 <label class="resultTiele">文件类型：</label>
                 {{item.type}}
+              </div>
+              <div class="infoItem">
+                <label class="resultTiele">分辨率：</label>
+                {{item.pixel}}
               </div>
               <div class="infoItem clearfix" style="clear: none;">
                 <label class="resultTiele pull-left">文件链接：</label>
@@ -191,9 +197,10 @@ export default {
             url: resData.domain + resData.hash,
             size: resData.size,
             name: fileName,
-            type: resData.type
+            type: resData.type,
+            pixel: `${resData.w}px * ${resData.h}px`
           };
-          resultList.push(obj);
+          resultList.unshift(obj);
           this.resultList = resultList;
           this.$notify.success({
             message: `${fileName} 上传成功！`,
@@ -238,6 +245,6 @@ export default {
 };
 </script>
 
-<style>
-@import url("./style/index.min.css");
+<style lang="scss">
+@import './style/index.scss';
 </style>
